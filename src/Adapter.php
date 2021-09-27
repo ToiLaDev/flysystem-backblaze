@@ -1,14 +1,13 @@
 <?php
 
-namespace ToiLaDev\Flysystem;
+namespace ToiLaDev\Flysystem\BackBlade;
 
-use BackblazeB2\Client;
 use GuzzleHttp\Psr7;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Adapter\Polyfill\NotSupportingVisibilityTrait;
 use League\Flysystem\Config;
 
-class BackblazeAdapter extends AbstractAdapter
+class Adapter extends AbstractAdapter
 {
     use NotSupportingVisibilityTrait;
 
