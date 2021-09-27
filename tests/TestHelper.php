@@ -1,8 +1,8 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade\Tests;
+namespace ToiLaDev\Flysystem\Backblaze\Tests;
 
-use ToiLaDev\Flysystem\BackBlade\Http\Client as HttpClient;
+use ToiLaDev\Flysystem\Backblaze\Http\Client as HttpClient;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;

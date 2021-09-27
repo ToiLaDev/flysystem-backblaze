@@ -1,16 +1,16 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade\Tests;
+namespace ToiLaDev\Flysystem\Backblaze\Tests;
 
-use ToiLaDev\Flysystem\BackBlade\Bucket;
-use ToiLaDev\Flysystem\BackBlade\Client;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\BadJsonException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\BadValueException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\BucketAlreadyExistsException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\BucketNotEmptyException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\NotFoundException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\ValidationException;
-use ToiLaDev\Flysystem\BackBlade\File;
+use ToiLaDev\Flysystem\Backblaze\Bucket;
+use ToiLaDev\Flysystem\Backblaze\Client;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\BadJsonException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\BadValueException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\BucketAlreadyExistsException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\BucketNotEmptyException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\NotFoundException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\ValidationException;
+use ToiLaDev\Flysystem\Backblaze\File;
 use GuzzleHttp\Middleware;
 use GuzzleHttp\Psr7\Stream;
 use PHPUnit\Framework\TestCase;

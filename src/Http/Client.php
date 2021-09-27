@@ -1,9 +1,9 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade\Http;
+namespace ToiLaDev\Flysystem\Backblaze\Http;
 
-use ToiLaDev\Flysystem\BackBlade\ErrorHandler;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\B2Exception;
+use ToiLaDev\Flysystem\Backblaze\ErrorHandler;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\B2Exception;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;

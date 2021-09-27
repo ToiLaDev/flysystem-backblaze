@@ -1,6 +1,6 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade;
+namespace ToiLaDev\Flysystem\Backblaze;
 
 class File implements \JsonSerializable
 {

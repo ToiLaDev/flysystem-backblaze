@@ -1,15 +1,15 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade;
+namespace ToiLaDev\Flysystem\Backblaze;
 
-use ToiLaDev\Flysystem\BackBlade\Exceptions\B2Exception;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\BadJsonException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\BadValueException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\BucketAlreadyExistsException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\BucketNotEmptyException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\FileNotPresentException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\NotFoundException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\UnauthorizedAccessException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\B2Exception;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\BadJsonException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\BadValueException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\BucketAlreadyExistsException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\BucketNotEmptyException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\FileNotPresentException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\NotFoundException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\UnauthorizedAccessException;
 use GuzzleHttp\Psr7\Response;
 
 class ErrorHandler

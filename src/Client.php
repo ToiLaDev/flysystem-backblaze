@@ -1,12 +1,13 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade;
+namespace ToiLaDev\Flysystem\Backblaze;
 
-use ToiLaDev\Flysystem\BackBlade\Exceptions\B2Exception;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\NotFoundException;
-use ToiLaDev\Flysystem\BackBlade\Exceptions\ValidationException;
-use ToiLaDev\Flysystem\BackBlade\Http\Client as HttpClient;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\B2Exception;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\NotFoundException;
+use ToiLaDev\Flysystem\Backblaze\Exceptions\ValidationException;
+use ToiLaDev\Flysystem\Backblaze\Http\Client as HttpClient;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Cache;
 use GuzzleHttp\Exception\GuzzleException;
 
 class Client
@@ -534,14 +535,21 @@ class Client
             return;
         }
 
-        $response = $this->client->guzzleRequest('GET', self::B2_API_BASE_URL.self::B2_API_V1.'/b2_authorize_account', [
-            'auth' => [$this->accountId, $this->applicationKey],
-        ]);
+        if (Cache::has('backblazeAuth')) {
+            $response = Cache::get('backblazeAuth');
+        }
+        else {
+            $response = $this->client->guzzleRequest('GET', self::B2_API_BASE_URL.self::B2_API_V1.'/b2_authorize_account', [
+                'auth' => [$this->accountId, $this->applicationKey],
+            ]);
+            $response['now'] = Carbon::now('UTC');
+            Cache::put('backblazeAuth', $response, $this->authTimeoutSeconds);
+        }
 
         $this->authToken = $response['authorizationToken'];
         $this->apiUrl = $response['apiUrl'].self::B2_API_V1;
         $this->downloadUrl = $response['downloadUrl'];
-        $this->reAuthTime = Carbon::now('UTC');
+        $this->reAuthTime = $response['now'];
         $this->reAuthTime->addSeconds($this->authTimeoutSeconds);
     }
 

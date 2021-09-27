@@ -11,7 +11,10 @@
     }
   ],
   "require": {
-    "php": "^7.2",
+    "php": "^7.2 || ^8.0",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.1|^7.0",
+    "nesbot/carbon": "2.*",
     "league/flysystem": "~1.0"
   },
   "require-dev": {
@@ -21,12 +24,12 @@
   },
   "autoload": {
     "psr-4": {
-      "ToiLaDev\\Flysystem\\BackBlade\\": "src"
+      "ToiLaDev\\Flysystem\\Backblaze\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ToiLaDev\\Flysystem\\BackBlade\\Tests\\": "tests"
+      "ToiLaDev\\Flysystem\\Backblaze\\Tests\\": "tests"
     }
   },
   "scripts": {

@@ -1,12 +1,11 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade;
+namespace ToiLaDev\Flysystem\Backblaze;
 
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
 
-class BackBladeServiceProvider extends ServiceProvider
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     public function boot()
     {

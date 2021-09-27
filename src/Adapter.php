@@ -1,6 +1,6 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade;
+namespace ToiLaDev\Flysystem\Backblaze;
 
 use GuzzleHttp\Psr7;
 use League\Flysystem\Adapter\AbstractAdapter;

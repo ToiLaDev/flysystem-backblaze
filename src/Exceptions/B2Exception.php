@@ -1,6 +1,6 @@
 <?php
 
-namespace ToiLaDev\Flysystem\BackBlade\Exceptions;
+namespace ToiLaDev\Flysystem\Backblaze\Exceptions;
 
 class B2Exception extends \Exception
 {
