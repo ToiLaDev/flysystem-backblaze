@@ -535,8 +535,8 @@ class Client
             return;
         }
 
-        if (Cache::has("backblazeAuth{$this->accountId}")) {
-            $response = Cache::get("backblazeAuth{$this->accountId}");
+        if (Cache::has('backblazeAuth')) {
+            $response = Cache::get('backblazeAuth');
         }
         else {
             $response = $this->client->guzzleRequest('GET', self::B2_API_BASE_URL.self::B2_API_V1.'/b2_authorize_account', [
