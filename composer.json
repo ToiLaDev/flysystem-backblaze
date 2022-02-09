@@ -11,9 +11,9 @@
     }
   ],
   "require": {
-    "php": "^8.*",
+    "php": "8.*",
     "ext-json": "*",
-    "guzzlehttp/guzzle": "^7.*",
+    "guzzlehttp/guzzle": "7.*",
     "nesbot/carbon": "2.*",
     "league/flysystem": "~3.0"
   },
