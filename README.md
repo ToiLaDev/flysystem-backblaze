@@ -1,3 +1,3 @@
 # flysystem-backblaze
-disk name b2
+driver name b2
  
